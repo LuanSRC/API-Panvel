@@ -16,7 +16,6 @@ export function list(req, res) {
   res.json(readUsers());
 }
 
-// GET
 export function getById(req, res) {
   const users = readUsers();
   res.json(users.find((u) => u.id == req.params.id));
