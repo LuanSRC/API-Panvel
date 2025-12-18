@@ -18,7 +18,8 @@ export function list(req, res) {
 
 export function getById(req, res) {
   const users = readUsers();
-  res.json(users.find((u) => u.id == req.params.id));
+  const user = users.find(u => u.id == req.params.id);
+  res.json(user);
 }
 
 // POST

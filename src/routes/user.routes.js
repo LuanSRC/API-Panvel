@@ -4,6 +4,7 @@ import * as usersController from "../controllers/user.controller.js";
 const usersRouter = Router();
 
 usersRouter.get("/", usersController.list);
+usersRouter.get("/:id", usersController.getById);
 usersRouter.post("/", usersController.create);
 usersRouter.put("/:id", usersController.update);
 usersRouter.delete("/:id", usersController.remove);
